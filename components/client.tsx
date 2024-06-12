@@ -30,8 +30,8 @@ const Navlinks = [
 export function Navbar(){
   return(
     <div className="flex flex-row justify-between items-center p-6">
-      <strong className="text-5xl font-bold tracking-tighter">Tollmahawk Plus</strong>
-      <div className="flex flex-row items-center gap-4 text-xl">
+      <strong className="text-3xl font-bold tracking-tighter">Tollmahawk Plus</strong>
+      <div className="flex flex-row items-center gap-4">
         {
           Navlinks.map((item:navigationLink, key:number) => (
             <Link key={key} href={item.href}>{item.label}</Link>

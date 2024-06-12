@@ -13,6 +13,28 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <div className="flex flex-row justify-evenly items-center gap-6 max-w-[1100px] h-[500px] mx-auto">
+        <div className="flex flex-col items-start justify-center gap-4 w-1/2 p-6">
+          <strong className="text-6xl tracking-tighter">Welcome to Tollmahawk Plus.</strong>
+          <p>Experience the professionalism and dedication of our team to elevate your sports performance to the next level.</p>
+          <Link className="text-xl hover:scale-105 duration-500" href='/'> → <span className="underline underline-offset-4">Get started</span></Link>
+        </div>
+        <div className="flex flex-col gap-4 w-1/2 border border-white border-l-black p-6">
+          <div>
+            <strong>Free Consultation</strong>
+            <p>Book a free consultation now so we can start planning.</p>
+          </div>
+          <div>
+            <strong>1-on-1 Coaching</strong>
+            <p>Book a 1-on-1 Coaching now so we can start planning.</p>
+          </div>
+          <div>
+            <strong>Sports Performance Test</strong>
+            <p>Book a Sports Performance Test now so we can start planning.</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
