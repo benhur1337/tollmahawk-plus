@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-import { Navbar } from "@/components/client";
+import { Navbar, Footer } from "@/components/client";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +21,8 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar/>
         {children}
+        <Footer/>
+        <div className="flex flex-row justify-center items-center p-6">Tollmahawk Plus ©</div>
       </body>
     </html>
   );

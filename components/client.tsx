@@ -43,3 +43,41 @@ export function Navbar(){
     </div>
   )
 }
+
+export function Footer(){
+  return(
+    <div className="py-[150px] max-w-[1100px] mx-auto">
+      <div className="flex flex-row justify-between">
+        <div className="flex flex-col gap-4">
+          <div className="text-5xl font-bold tracking-tighter">Tollmahawk Plus</div>
+          <div>Unleash performance within.</div>
+        </div>
+
+        <div className="flex flex-row justify-evenly gap-9 w-1/2">
+          <div className="flex flex-col gap-4">
+            <div className="text-2xl font-bold tracking-tighter">Navigation</div>
+            {
+              Navlinks.map((item:navigationLink, key:number) => (
+                <Link key={key} href={item.href}>{item.label}</Link>
+              ))
+            }
+          </div>
+          <div>
+            <div className="text-2xl font-bold tracking-tighter">Location</div>
+            <div>Lorem ipsum dolor sit amet.</div>
+            <div>Lorem ipsum dolor sit amet.</div>
+            <div>Lorem ipsum dolor sit amet.</div>
+          </div>
+          <div>
+            <div className="text-2xl font-bold tracking-tighter">Contact</div>
+            <div className="flex flex-row gap-4">
+              <div className="h-[1.5rem] w-[1.5rem] bg-black rounded"></div>
+              <div className="h-[1.5rem] w-[1.5rem] bg-black rounded"></div>
+              <div className="h-[1.5rem] w-[1.5rem] bg-black rounded"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
