@@ -29,7 +29,23 @@ const Navlinks = [
 
 export function Navbar(){
   return(
-    <div className="flex flex-row justify-between items-center p-6">
+    <div className="flex flex-row justify-between items-center p-6 fixed top-0 left-0 w-full z-50">
+      <strong className="text-3xl font-bold tracking-tighter">Tollmahawk Plus</strong>
+      <div className="flex flex-row items-center gap-4">
+        {
+          Navlinks.map((item:navigationLink, key:number) => (
+            <Link key={key} href={item.href}>{item.label}</Link>
+          ))
+        }
+
+        <Link href='/line'><button className="bg-black text-white border border-black hover:bg-white hover:text-black rounded p-2 duration-500">Free Trial</button></Link>
+      </div>
+    </div>
+  )
+}
+export function NavbarInvis(){
+  return(
+    <div className="flex flex-row justify-between items-center p-6 pointer-events-none">
       <strong className="text-3xl font-bold tracking-tighter">Tollmahawk Plus</strong>
       <div className="flex flex-row items-center gap-4">
         {
