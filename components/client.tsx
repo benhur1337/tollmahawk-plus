@@ -3,6 +3,8 @@
 import Link from "next/link"
 import { useState } from "react"
 
+import { usePathname } from "next/navigation"
+
 interface navigationLink{
   label:string
   href:string
@@ -28,13 +30,16 @@ const Navlinks = [
 ]
 
 export function Navbar(){
+  
+  const currentPath = usePathname()
+
   return(
     <div className="flex flex-row justify-between items-center p-6 fixed top-0 left-0 w-full z-50">
-      <strong className="text-3xl font-bold tracking-tighter">Tollmahawk Plus</strong>
+      <Link href="/"><strong className="text-3xl font-bold tracking-tighter">Tollmahawk Plus</strong></Link>
       <div className="flex flex-row items-center gap-4">
         {
           Navlinks.map((item:navigationLink, key:number) => (
-            <Link key={key} href={item.href}>{item.label}</Link>
+            <Link key={key} href={item.href} className={item.href == currentPath? "font-bold scale-105 underline underline-offset-4" : "font-normal"}>{item.label}</Link>
           ))
         }
 
